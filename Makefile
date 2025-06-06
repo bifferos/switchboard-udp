@@ -29,7 +29,6 @@ install: build
 uninstall:
 	sudo systemctl disable --now $(APP_NAME).service
 	sudo rm -f $(INSTALL_DIR)/$(BINARY_NAME)
-	sudo rm -rf $(STATE_DIR)
 	sudo rm -f $(SYSTEMD_DIR)/$(SERVICE_FILE)
 	sudo systemctl daemon-reexec
 	@echo "Uninstalled $(BINARY_NAME)"
