@@ -1,0 +1,11 @@
+[Unit]
+Description=Switchboard UDP service
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/switchboard-udp
+Restart=on-failure
+WorkingDirectory=/var/lib/switchboard
+
+[Install]
+WantedBy=multi-user.target
