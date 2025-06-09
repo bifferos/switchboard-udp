@@ -32,6 +32,26 @@ uninstall:
 	sudo rm -f $(SYSTEMD_DIR)/$(SERVICE_FILE)
 	sudo systemctl daemon-reexec
 	@echo "Uninstalled $(BINARY_NAME)"
+
+
+info:
+	systemctl status $(SERVICE_FILE)
+	
+	
+logs:
+	journalctl -u $(SERVICE_FILE) -n 20
+	
+	
+stop:
+	sudo systemctl stop $(SERVICE_FILE)
+
+
+start:
+	sudo systemctl start $(SERVICE_FILE)
+	
+	
+tcpdump:
+	sudo tcpdump -i any udp port 6060
 	
 
 build:
