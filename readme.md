@@ -41,15 +41,10 @@ Only suported on Linux systemd.
 `$ make install`
 
 Will setup the system with some default locations. 
-Install files manually if you want to change default locations.
-The locations for the various directories are hard-coded
-into the binary.  You can override them with the config file.
-Anything missing from the config file will fall back 
-to the defaults in main.go.
 
 ## Configuration
 
-Post-install the defaults should work fine.  The server will 
+Post-install the default config should work fine.  The server will 
 listen on port 6060, and check for existence of files in 
 `/var/lib/switchboard` If you are unhappy with these defaults, 
 copy config.json into the directory `/etc/switchboard-udp/config.json`
