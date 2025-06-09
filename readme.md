@@ -54,3 +54,9 @@ listen on port 6060, and check for existence of files in
 `/var/lib/switchboard` If you are unhappy with these defaults, 
 copy config.json into the directory `/etc/switchboard-udp/config.json`
 and edit the values to suit.
+
+You will need to restart the service after changing config.json
+
+`$ make stop`
+
+`$ make start`
